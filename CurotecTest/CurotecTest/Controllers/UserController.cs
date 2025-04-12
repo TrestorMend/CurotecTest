@@ -7,7 +7,7 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using ILogger = Serilog.ILogger;
 
-namespace Communique.API.Controllers
+namespace CurotecTest.Controllers
 {
     [Route("[controller]")]
     [ApiController]

@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Communique.Repository.Mapping
+namespace Repository.Mapping
 {
     public class BookMap : IEntityTypeConfiguration<Book>
     {

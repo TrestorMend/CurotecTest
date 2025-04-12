@@ -1,6 +1,4 @@
-﻿using Communique.Repository;
-
-namespace Repository
+﻿namespace Repository
 {
     public class UnitOfWork : IUnitOfWork
     {

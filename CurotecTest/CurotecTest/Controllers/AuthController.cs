@@ -5,17 +5,17 @@ using CurotecTest.Controllers.Base;
 using CurotecTest.ViewModels.Auth;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Communique.API.Controllers
+namespace CurotecTest.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class AuthController :  ControllerBase
+    public class AuthController : ControllerBase
     {
         private readonly ILoginService _loginService;
         private readonly IMapper _mapper;
 
         public AuthController(ILoginService loginService,
-            IMapper mapper) 
+            IMapper mapper)
         {
             _loginService = loginService;
             _mapper = mapper;

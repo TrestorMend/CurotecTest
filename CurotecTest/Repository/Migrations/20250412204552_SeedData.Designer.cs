@@ -5,14 +5,15 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using Repository;
 
 #nullable disable
 
 namespace Repository.Migrations
 {
     [DbContext(typeof(CurotecDbContext))]
-    [Migration("20250412025139_InitialStructure")]
-    partial class InitialStructure
+    [Migration("20250412204552_SeedData")]
+    partial class SeedData
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -57,6 +58,28 @@ namespace Repository.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Author", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedDate = new DateTime(2025, 4, 12, 20, 45, 51, 447, DateTimeKind.Utc).AddTicks(1734),
+                            CreatedUserId = 1,
+                            FirstName = "Jane",
+                            LastName = "Austen",
+                            UpdatedDate = new DateTime(2025, 4, 12, 20, 45, 51, 447, DateTimeKind.Utc).AddTicks(1734),
+                            UpdatedUserId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedDate = new DateTime(2025, 4, 12, 20, 45, 51, 447, DateTimeKind.Utc).AddTicks(1734),
+                            CreatedUserId = 1,
+                            FirstName = "Mark",
+                            LastName = "Twain",
+                            UpdatedDate = new DateTime(2025, 4, 12, 20, 45, 51, 447, DateTimeKind.Utc).AddTicks(1734),
+                            UpdatedUserId = 1
+                        });
                 });
 
             modelBuilder.Entity("Domain.Entities.Book", b =>
@@ -95,6 +118,41 @@ namespace Repository.Migrations
                     b.HasIndex("AuthorId");
 
                     b.ToTable("Book", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            AuthorId = 1,
+                            CreatedDate = new DateTime(2025, 4, 12, 20, 45, 51, 447, DateTimeKind.Utc).AddTicks(1734),
+                            CreatedUserId = 1,
+                            Title = "Pride and Prejudice",
+                            UpdatedDate = new DateTime(2025, 4, 12, 20, 45, 51, 447, DateTimeKind.Utc).AddTicks(1734),
+                            UpdatedUserId = 1,
+                            YearPublished = 1813
+                        },
+                        new
+                        {
+                            Id = 2,
+                            AuthorId = 1,
+                            CreatedDate = new DateTime(2025, 4, 12, 20, 45, 51, 447, DateTimeKind.Utc).AddTicks(1734),
+                            CreatedUserId = 1,
+                            Title = "Emma",
+                            UpdatedDate = new DateTime(2025, 4, 12, 20, 45, 51, 447, DateTimeKind.Utc).AddTicks(1734),
+                            UpdatedUserId = 1,
+                            YearPublished = 1815
+                        },
+                        new
+                        {
+                            Id = 3,
+                            AuthorId = 2,
+                            CreatedDate = new DateTime(2025, 4, 12, 20, 45, 51, 447, DateTimeKind.Utc).AddTicks(1734),
+                            CreatedUserId = 1,
+                            Title = "Adventures of Huckleberry Finn",
+                            UpdatedDate = new DateTime(2025, 4, 12, 20, 45, 51, 447, DateTimeKind.Utc).AddTicks(1734),
+                            UpdatedUserId = 1,
+                            YearPublished = 1884
+                        });
                 });
 
             modelBuilder.Entity("Domain.Entities.Role", b =>

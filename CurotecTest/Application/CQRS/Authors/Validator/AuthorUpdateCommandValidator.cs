@@ -1,14 +1,13 @@
-﻿using Application.CQRS.Books.Commands;
-using Application.CQRS.Books.Validator;
+﻿using Application.CQRS.Authors.Commands;
 using FluentValidation;
 
-namespace Communique.Application.CQRS.Books.Validator
+namespace Application.CQRS.Authors.Validator
 {
-    public class BookUpdateCommandValidator : AbstractValidator<BookUpdateCommand>
+    public class AuthorUpdateCommandValidator : AbstractValidator<AuthorUpdateCommand>
     {
-        public BookUpdateCommandValidator()
+        public AuthorUpdateCommandValidator()
         {
-            Include(new BaseBookCommandValidator());
+            Include(new BaseAuthorCommandValidator());
             RuleFor(x => x.Id).NotEmpty().WithMessage("Id is required");
         }
     }

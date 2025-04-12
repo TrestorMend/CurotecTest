@@ -1,15 +1,13 @@
-using Communique.Repository;
 using CurotecTest;
 using Domain.Entities;
-using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Repository;
 using Serilog;
-using System.Reflection;
 using System.Text;
 
 internal class Program

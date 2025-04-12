@@ -1,5 +1,4 @@
-﻿using Application.CQRS;
-using Application.CQRS.Authors.Queries;
+﻿using Application.CQRS.Authors.Queries;
 using Application.Responses;
 using Application.Services.Authors;
 using Application.Services.Authors.DTO.Request;
@@ -8,7 +7,7 @@ using MediatR;
 using Repository;
 using Serilog;
 
-namespace Communique.Application.CQRS.Authors.Handler
+namespace Application.CQRS.Authors.Handler
 {
     public class AuthorQueryHandler : CommandQueryHandlerBase,
         IRequestHandler<AuthorGetByIdQuery, ResponseState>,

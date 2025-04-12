@@ -1,5 +1,4 @@
-﻿using Application.CQRS;
-using Application.CQRS.Books.Queries;
+﻿using Application.CQRS.Books.Queries;
 using Application.Responses;
 using Application.Services.Books;
 using Application.Services.Books.DTO.Request;
@@ -8,7 +7,7 @@ using MediatR;
 using Repository;
 using Serilog;
 
-namespace Communique.Application.CQRS.Books.Handler
+namespace Application.CQRS.Books.Handler
 {
     public class BookQueryHandler : CommandQueryHandlerBase,
         IRequestHandler<BookGetByIdQuery, ResponseState>,

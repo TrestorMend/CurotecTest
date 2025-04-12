@@ -5,14 +5,15 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using Repository;
 
 #nullable disable
 
 namespace Repository.Migrations
 {
     [DbContext(typeof(CurotecDbContext))]
-    [Migration("20250412025139_InitialStructure")]
-    partial class InitialStructure
+    [Migration("20250412205036_Changes")]
+    partial class Changes
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

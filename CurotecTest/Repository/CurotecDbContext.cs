@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace Communique.Repository
+namespace Repository
 {
     public class CurotecDbContext : IdentityDbContext<User, Role, int,
                                        IdentityUserClaim<int>, UserRole, IdentityUserLogin<int>,

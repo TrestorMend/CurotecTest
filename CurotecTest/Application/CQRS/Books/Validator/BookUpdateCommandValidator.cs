@@ -1,8 +1,7 @@
 ﻿using Application.CQRS.Books.Commands;
-using Application.CQRS.Books.Validator;
 using FluentValidation;
 
-namespace Communique.Application.CQRS.Books.Validator
+namespace Application.CQRS.Books.Validator
 {
     public class BookUpdateCommandValidator : AbstractValidator<BookUpdateCommand>
     {

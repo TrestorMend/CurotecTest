@@ -1,5 +1,4 @@
-﻿using Communique.Repository;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Repository.Extensions;
 using System.Linq.Expressions;
 using System.Reflection;
