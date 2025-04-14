@@ -48,6 +48,8 @@ Username: admin
 
 Password: Curotec@2025
 
+Add the bearer token returned to the Authorize section of the swagger and all the methods should be available after successful authentication.
+
 ✍️ Author
 Developed by @TrestorMend
 Feel free to contribute, fork, or raise issues!
